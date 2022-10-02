@@ -1,0 +1,7 @@
+﻿sensor_id,time_stamp,sensor_type,reading
+1,2021-04-30T00:50:30Z,temperature,2000
+2,2021-04-30T00:50:30Z,humidity,60
+3,2021-04-30T00:50:40Z,temperature,2500
+4,2021-04-30T00:50:40Z,humidity,75
+5,2021-04-30T00:50:40Z,humidity,150
+6,2021-04-30T00:50:40Z,humidity,-100

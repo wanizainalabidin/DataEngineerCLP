@@ -1,0 +1,7 @@
+sensor_id,humidity,temperature,Dew_Point
+6,-100,,
+1,,2000,
+5,150,,
+3,,2500,
+2,60,,
+4,75,,

@@ -1,0 +1,16 @@
+{
+  "measurements": [
+    {
+      "device_id": 123456,
+      "device_name": "Test Device",
+      "time": "2022-07-11T02:15:00Z",
+      "cumulative_energy": 120.12
+    },
+    {
+      "device_id": 123456,
+      "device_name": "Test Device",
+      "time": "2022-07-11T02:20:00Z",
+      "cumulative_energy": 122.45
+    }
+  ]
+}
