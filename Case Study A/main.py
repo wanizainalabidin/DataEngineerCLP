@@ -9,7 +9,7 @@ from datetime import datetime
 
 
 
-#Environment variable to connect to PSQL
+#Environment variable to connect to PSQL. The port used is 5432 but if used by other applications, change the port number accordingly.
 USER = "postgres"
 PASSWORD = "postgres"
 PORT = 5432
