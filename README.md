@@ -22,7 +22,7 @@ docker container ls
 ```
 Execute the recently created container to use it 
 ```
-docker exec it <CONTAINER NAME> /bin/bash
+docker exec it <CONTAINER ID> /bin/bash
 ```
 View what is available inside the container 
 ```
