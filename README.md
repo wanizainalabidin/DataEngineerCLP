@@ -4,23 +4,15 @@ This file is divided into Case Study A and Case Study B
 
 As for case study A, the docker file contains environment variables to automtically create containers based on the username and password. I have also created an sql file that will read data from postgres automatically. For this to work, it is necessary for user to initialise building the Postgres container on their own and build connection to SQL file. Below are the steps to create the connection
 
-Build the docker image on terminal
+Run the sh script in the Input folder that will build and run the docker image
 ``` 
-docker build -t postgresdb .
-```
-Scan the docker image to see if the recently created image is there 
-```
-docker images
-```
-Create the new container in the created image. Here, I'm building the port on 5432, change the port number accordingly if port has been used by other applications
-```
-docker run -d --name postgresclp -p 5432:5432 postgresdb
+sudo sh start_docker.sh
 ```
 List down the container
 ```
 docker container ls
 ```
-Execute the recently created container to use it 
+To verify the contents of the container, run the following command 
 ```
 docker exec it <CONTAINER ID> /bin/bash
 ```
