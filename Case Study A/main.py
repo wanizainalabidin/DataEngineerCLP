@@ -83,7 +83,7 @@ def create_database():
             stream1 = tabulate(stream, tablefmt='html')
             cur.close()
             conn.close()
-            return stream1 #when users type /get in the local host port, this will display the database in tabular format
+            return stream1 #when users type /update in the local host port, this will display the database in tabular format
                         #since the question has asked for passing a CSV file that can populate to a database, this will work.
                        #In the future, the code can be further extended to include other CRUD commands together with POST, PUT and delete
 
