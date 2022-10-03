@@ -52,6 +52,6 @@ Lastly, the spark.py file answers the third part of the question which is to pro
 
 
 
-In case study B, you will see a json file, a python file and an output file. The main.py file is the code that is meant to read data from json and flatten them as data frames. The output file is the saved file in Parquet format. The assumption for this case study is that the Kafka and Spark streaming in python has already been configured in advance and as such, only processing of raw file is required. 
+In case study B, you will see a json file, a python file and an output file. The main.py file is the code that is meant to read data from json and flatten them as data frames. The output file is the saved file in Parquet format. The assumption for this case study is that the Kafka and Spark streaming in python have already been configured in advance and as such, only processing of raw file is required. The folder also includes a word document for the last business question on tools to query data directly from MinIO
 
 
