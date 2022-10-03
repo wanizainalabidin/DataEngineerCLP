@@ -8,8 +8,43 @@ Build the docker image on terminal
 ``` 
 docker build -t postgresdb .
 ```
-
-
+Scan the docker image to see if the recently created image is there 
+```
+docker images
+```
+Create the new container in the created image
+```
+docker run -d --name postgresclp -p 5432:5432 postgresdb
+```
+List down the container
+```
+docker container ls
+```
+Execute the recently created container to use it 
+```
+docker exec it <CONTAINER NAME> /bin/bash
+```
+View what is available inside the container 
+```
+ls
+```
+Go into the sql folder that is available in the Docker file
+```
+cd docker-entrypoint-initdb.d/
+```
+Use the SQL file available in the same folder
+```
+cat clp.sql
+```
+Access the Postgres database with the following command
+```
+psql -U postgres
+```
+Access the database 
+```
+\c clp
+```
+Ready to use!
 
 The main.py file answers the second part of the case study where users can send a HTTP request to 1) understand data from current database, 2) upload csv file and 3) read uploaded csv which will automatically populate to the current data. For this, I have created a dummy csv file, "clp dummy-2.csv" with different values. 
 
