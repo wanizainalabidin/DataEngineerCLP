@@ -10,6 +10,6 @@ Lastly, the spark.py file answers the third part of the question which is to pro
 
 
 
-In case study B, you will see a json file, a python file and an output file. The python file is the code that is meant to read data from json and flatten them as data frames. The output file is the saved file in Parquet. 
+In case study B, you will see a json file, a python file and an output file. The main.py file is the code that is meant to read data from json and flatten them as data frames. The output file is the saved file in Parquet format 
 
 
