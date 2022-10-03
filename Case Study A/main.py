@@ -84,8 +84,8 @@ def create_database():
             cur.close()
             conn.close()
             return stream1 #when users type /get in the local host port, this will display the database in tabular format
-#                        #since the question has asked for passing a CSV file that can populate to a database, this will work.
-#                       #In the future, the code can be further extended to include other CRUD commands together with POST, PUT and delete
-#
-    except Exception:
+                        #since the question has asked for passing a CSV file that can populate to a database, this will work.
+                       #In the future, the code can be further extended to include other CRUD commands together with POST, PUT and delete
+
+    except Exception:  # this error handling is to ensure that the csv file and values match the database schema to ensure data quality check. 
         return "ERROR: Please Check if Sensor_ID is unique and data types are matching with database"
