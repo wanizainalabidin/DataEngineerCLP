@@ -2,7 +2,14 @@
 
 This file is divided into Case Study A and Case Study B
 
-As for case study A, the docker file contains environment variables to automtically create containers based on the username and password. I have also created an sql file that will read data from postgres automatically. For this to work, it is necessary for user to initialise building the Postgres container on their own and build connection to SQL file.
+As for case study A, the docker file contains environment variables to automtically create containers based on the username and password. I have also created an sql file that will read data from postgres automatically. For this to work, it is necessary for user to initialise building the Postgres container on their own and build connection to SQL file. Below are the steps to create the connection
+
+Build the docker image on terminal
+``` 
+docker build -t postgresdb .
+```
+
+
 
 The main.py file answers the second part of the case study where users can send a HTTP request to 1) understand data from current database, 2) upload csv file and 3) read uploaded csv which will automatically populate to the current data. For this, I have created a dummy csv file, "clp dummy-2.csv" with different values. 
 
