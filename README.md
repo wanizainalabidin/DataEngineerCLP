@@ -2,7 +2,7 @@
 
 This file is divided into Case Study A and Case Study B
 
-As for case study A, the docker file contains environment variables to automtically create containers based on the username and password. I have also created an sql file that will read data from postgres automatically. 
+As for case study A, the docker file contains environment variables to automtically create containers based on the username and password. I have also created an sql file that will read data from postgres automatically. For this to work, it is necessary for user to initialise building the Postgres container on their own and build connection to SQL file.
 
 The main.py file answers the second part of the case study where users can send a HTTP request to 1) understand data from current database, 2) upload csv file and 3) read uploaded csv which will automatically populate to the current data. For this, I have created a dummy csv file, "clp dummy-2.csv" with different values. 
 
@@ -10,6 +10,6 @@ Lastly, the spark.py file answers the third part of the question which is to pro
 
 
 
-In case study B, you will see a json file, a python file and an output file. The main.py file is the code that is meant to read data from json and flatten them as data frames. The output file is the saved file in Parquet format 
+In case study B, you will see a json file, a python file and an output file. The main.py file is the code that is meant to read data from json and flatten them as data frames. The output file is the saved file in Parquet format. The assumption for this case study is that the Kafka and Spark streaming in python has already been configured in advance and as such, only processing of raw file is required. 
 
 
