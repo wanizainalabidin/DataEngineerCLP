@@ -22,9 +22,10 @@ app = Flask(__name__, template_folder="template")
 # Create index route where end users can go to; a welcome page
 @app.route('/')
 def index():
-    return "Welcome to Database Sensor. On the server, type /get to get data from Postgres! Or /post to see updated database from CSV"
+    return "Welcome to Database Sensor. On the server, type /get to get current data from Postgres! Or /Upload to upload a file. To see the updated database after uploading the file, use /update"
 
 
+#This request is for users to understand current, existing data that is already available in Postgres.
 @app.route('/get', methods=["GET"])
 def get_database():
     conn = get_db_connection()
@@ -37,7 +38,7 @@ def get_database():
     return stream2
 
 
-
+# A HTML file to allow users to upload a file. In this case, only CSV file is accepted. The uploaded file will be automatically downloaded and stored in current directory
 ALLOWED_EXTENSIONS = ["csv"]
 
 def allowed_file(filename):
@@ -51,8 +52,8 @@ def upload():
         file = request.files['file']
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            dir=os.getcwd()
-            save_location = os.path.join(dir, filename)
+            dir=os.getcwd()   
+            save_location = os.path.join(dir, filename) 
             file.save(save_location)
             return "Thank you for uploading"
     return render_template("index.html")
@@ -66,7 +67,8 @@ def get_db_connection():
     return conn
 
 
-
+#This HTTP request helps users understand the updated database after user has uploaded the file. 
+#Currently, the file is read manually but, moving forward, it will be good to read files dynamically once user has uploaded the file
 @app.route('/update', methods=["PUT"])
 def create_database():
     conn = get_db_connection()
