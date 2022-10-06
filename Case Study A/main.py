@@ -24,6 +24,12 @@ app = Flask(__name__, template_folder="template")
 def index():
     return "Welcome to Database Sensor. On the server, type /get to get current data from Postgres! Or /Upload to upload a file. To see the updated database after uploading the file, use /update"
 
+def get_db_connection():
+    conn = psycopg2.connect(host='localhost',
+                            database='clp',
+                            user=USER,
+                            password=PASSWORD, port =PORT)
+    return conn
 
 #This request is for users to understand current, existing data that is already available in Postgres.
 @app.route('/get', methods=["GET"])
@@ -57,14 +63,6 @@ def upload():
             file.save(save_location)
             return "Thank you for uploading"
     return render_template("index.html")
-
-
-def get_db_connection():
-    conn = psycopg2.connect(host='localhost',
-                            database='clp',
-                            user=USER,
-                            password=PASSWORD, port =PORT)
-    return conn
 
 
 #This HTTP request helps users understand the updated database after user has uploaded the file. 
